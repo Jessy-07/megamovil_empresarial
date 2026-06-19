@@ -1,0 +1,259 @@
+.home {
+  background-color: #e8e8e8;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 24px;
+  font-family: 'Arial', sans-serif;
+  border-radius: 16px;
+}
+
+
+/* ── Section wrapper ─────────────────────────── */
+.planes-section {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* ── Header ──────────────────────────────────── */
+.planes-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.planes-titulo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.planes-titulo em {
+  font-style: italic;
+  color: #1414e0;
+  font-weight: 700;
+}
+
+.planes-subtitulo {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0 0 36px;
+  line-height: 1.5;
+}
+
+/* ── Cards grid ──────────────────────────────── */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/* ── Plan card ───────────────────────────────── */
+.plan-card {
+  background: #fff;
+  padding: 24px 20px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card--destacado {
+  border: 2.5px solid #1414e0;
+}
+
+/* ── Badge ───────────────────────────────────── */
+.plan-badge {
+    position: absolute;
+    top: -35px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #1414e0;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 10px 12px;
+    width: 180px;
+    text-align: center;
+}
+
+/* ── Card internals ──────────────────────────── */
+.plan-categoria {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #666;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.plan-lineas {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+
+.plan-divider {
+  border: none;
+  border-top: 1.5px solid #222;
+  margin: 0 0 14px;
+}
+
+.plan-datos {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.plan-dato {
+  font-size: 1.3rem;
+  color: #111;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.plan-mas {
+  display: block;
+  font-size: 1rem;
+  color: #111;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+.plan-extra {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.plan-por-solo {
+  font-size: 0.75rem;
+  color: #333;
+  margin: 0 0 2px;
+}
+
+.plan-precio {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 16px;
+  line-height: 1;
+}
+
+.plan-mes {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #555;
+  vertical-align: middle;
+}
+
+/* ── CTA button row ──────────────────────────── */
+.plan-cta {
+  display: flex;
+  margin: 0 -20px;
+  border-top: none;
+}
+
+.plan-btn {
+  flex: 1;
+  background-color: #1414e0;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.plan-btn:hover {
+  background-color: #0d0dbd;
+}
+
+.plan-btn-arrow {
+  background-color: #0d0dbd;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.plan-btn-arrow:hover {
+  background-color: #0a0aaa;
+}
+
+/* ── Redes sociales ──────────────────────────── */
+.redes-section {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.redes-texto {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 4px;
+}
+
+.redes-titulo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 16px;
+}
+
+.redes-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.red-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: default;
+  user-select: none;
+}
+
+.red-icono--dark {
+  color: #111;
+}
+
+.redes-plus {
+  font-size: 1.8rem;
+  color: #111;
+  margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 680px) {
+  .planes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card--destacado {
+    margin-top: 0;
+  }
+}
