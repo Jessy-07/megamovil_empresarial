@@ -1,14 +1,13 @@
-.home {
+.planes-negocio-container {
   background-color: #e8e8e8;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 48px 24px;
-  font-family: 'Arial', sans-serif;
   border-radius: 16px;
+  margin: 20px;
 }
-
 
 /* ── Section wrapper ─────────────────────────── */
 .planes-section {
@@ -66,13 +65,16 @@
 }
 
 .plan-card--destacado {
-  border: 2.5px solid #1414e0;
+  border-top: 2px solid #1414e0;
+  border-right: 2px solid #1414e0;
+  border-bottom: none;
+  border-left: 2px solid #1414e0;
 }
 
 /* ── Badge ───────────────────────────────────── */
 .plan-badge {
     position: absolute;
-    top: -35px;
+    top: -40px;
     right: 50%;
     transform: translateX(50%);
     background-color: #1414e0;
