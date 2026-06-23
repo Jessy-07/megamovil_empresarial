@@ -1,0 +1,168 @@
+/* src/components/Footer/Footer.css */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer-content {
+  background-color: #ffffff;
+  border-radius: 24px;
+  width: 100%;
+  padding: 48px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  height: 32px;
+  min-width: 24px;
+  object-fit: contain;
+}
+
+.footer-brand-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+  color: #111;
+  letter-spacing: -0.02em;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav .arrow {
+  font-size: 0.7rem;
+  margin-left: 2px;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.footer-description {
+  max-width: 500px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;
+}
+
+.footer-location a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer-location a:hover {
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #E0E0E0;
+  margin: 0 0 32px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.footer-contact a {
+  text-decoration: underline;
+  color: #111;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer-contact a:hover {
+  text-decoration: none;
+}
+
+.footer-social {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.social-icon.facebook {
+  background-color: #006FFF;
+}
+
+.social-icon.x-twitter {
+  background-color: #000000;
+}
+
+.social-icon.youtube {
+  background-color: #FF0000;
+}
+
+.social-icon.instagram {
+  background-color: #E1306C;
+}
+
+@media (max-width: 768px) {
+
+  .footer-top,
+  .footer-middle,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-middle {
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+  }
+
+  .footer-content {
+    padding: 32px 24px;
+  }
+}
