@@ -1,63 +1,24 @@
-.planes-negocio-container {
-  background-color: #e8e8e8;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 48px 24px;
-  border-radius: 16px;
-  margin: 20px;
+.megamovil-negocio-container {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/home/megamovil-negocio-banner01.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
-/* ── Section wrapper ─────────────────────────── */
-.planes-section {
-  max-width: 1000px;
-  width: 100%;
+.cursive-txt {
+  font-family: var(--font-serif);
 }
 
-/* ── Header ──────────────────────────────────── */
-.planes-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #555;
-  text-transform: uppercase;
-  margin: 0 0 8px;
+@media (max-width: 768px) {
+  .megamovil-negocio-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url("../../assets/img/home/megamovil-negocio-banner01.jpg");
+  }
 }
 
-.planes-titulo {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #111;
-  margin: 0 0 12px;
-  line-height: 1.2;
-}
-
-.planes-titulo em {
-  font-style: italic;
-  color: #1414e0;
-  font-weight: 700;
-}
-
-.planes-subtitulo {
-  font-size: 1.4rem;
-  color: #333;
-  margin: 0 0 36px;
-  line-height: 1.5;
-}
-
-/* ── Cards grid ──────────────────────────────── */
-.planes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: start;
-  margin-bottom: 40px;
-}
 
 /* ── Plan card ───────────────────────────────── */
 .plan-card {
-  background: #FAF9F4;
+  background: #fff;
   padding: 24px 20px 0;
   position: relative;
   display: flex;
@@ -65,10 +26,10 @@
 }
 
 .plan-card--destacado {
-  border-top: 2px solid #1414e0;
-  border-right: 2px solid #1414e0;
+  border-top: 2px solid #2a48ff;
+  border-right: 2px solid #2a48ff;
   border-bottom: none;
-  border-left: 2px solid #1414e0;
+  border-left: 2px solid #2a48ff;
 }
 
 /* ── Badge ───────────────────────────────────── */
@@ -77,27 +38,25 @@
   top: -40px;
   right: 50%;
   transform: translateX(50%);
-  background-color: #1414e0;
+  background-color: #2a48ff;
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.06em;
-  padding: 10px 12px;
-  width: 180px;
+  padding: 8px 12px;
+  width: 280px;
   text-align: center;
 }
 
 /* ── Card internals ──────────────────────────── */
 .plan-categoria {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 16px;
   color: #666;
   text-transform: uppercase;
   margin: 0 0 4px;
 }
 
 .plan-lineas {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: #111;
   margin: 0 0 10px;
@@ -107,7 +66,7 @@
 .plan-divider {
   border: none;
   border-top: 1.5px solid #222;
-  margin: 0 0 14px;
+  margin: 8px 0 16px 0;
 }
 
 .plan-datos {
@@ -116,7 +75,7 @@
 }
 
 .plan-dato {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: #111;
   margin: 0;
   line-height: 1.4;
@@ -129,37 +88,36 @@
 
 .plan-mas {
   display: block;
-  font-size: 1rem;
+  font-size: 1.7rem;
   color: #111;
   margin: 4px 0;
   line-height: 1;
 }
 
 .plan-extra {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 16px;
   letter-spacing: 0.06em;
   color: #555;
   text-transform: uppercase;
-  margin: 0 0 6px;
+  margin: 0 0 16px;
 }
 
 .plan-por-solo {
-  font-size: 0.75rem;
-  color: #333;
+  font-size: 16px;
+  color: #555;
   margin: 0 0 2px;
 }
 
 .plan-precio {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: #111;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   line-height: 1;
 }
 
 .plan-mes {
-  font-size: 0.75rem;
+  font-size: 16px;
   font-weight: 400;
   color: #555;
   vertical-align: middle;
@@ -170,118 +128,44 @@
   display: flex;
   margin: 0 -20px;
   border-top: none;
+  cursor: pointer;
 }
 
 .plan-btn {
   flex: 1;
-  background-color: #1414e0;
+  background-color: #2252ff;
   color: #fff;
   border: none;
   padding: 12px 16px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
+  font-size: 1rem;
   text-align: left;
   transition: background 0.2s;
 }
 
-.plan-btn:hover {
-  background-color: #0d0dbd;
+.plan-cta:hover .plan-btn {
+  background-color: #1845e9;
 }
 
 .plan-btn-arrow {
-  background-color: #0d0dbd;
+  background-color: #001493;
   color: #fff;
   border: none;
   padding: 12px 16px;
   font-size: 1rem;
-  cursor: pointer;
+  width: 30%;
   transition: background 0.2s;
-}
-
-.plan-btn-arrow:hover {
-  background-color: #0a0aaa;
-}
-
-/* ── Redes sociales ──────────────────────────── */
-.redes-section {
-  text-align: center;
-  margin-top: 8px;
-}
-
-.redes-texto {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 0 0 4px;
-}
-
-.redes-titulo {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #111;
-  margin: 0 0 16px;
-}
-
-.redes-iconos {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-}
-
-.red-icono {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: default;
-  user-select: none;
 }
 
-.red-icono--dark {
-  color: #111;
+.plan-cta:hover .plan-btn-arrow {
+  background-color: #09098e;
 }
 
-.redes-plus {
-  font-size: 1.8rem;
-  color: #111;
-  margin: 0;
-}
 
-/* ── Responsive ──────────────────────────────── */
-@media (max-width: 680px) {
-  .planes-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .plan-card--destacado {
-    margin-top: 0;
-  }
-}
 
-/* ── Individual plans container ──────────────── */
-.planes-individual-container {
-  background-color: #ffffff;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 48px 24px;
-  border-radius: 16px;
-  margin: 20px;
-}
-
-.planes-titulo--individual em {
-  font-style: italic;
-  color: #FF9A00;
-  font-weight: 700;
-}
 
 /* ── Orange card variant ─────────────────────── */
 .plan-card--destacado-orange {
@@ -299,7 +183,7 @@
   background-color: #FF9A00;
 }
 
-.plan-btn--orange:hover {
+.plan-cta:hover .plan-btn--orange {
   background-color: #e08800;
 }
 
@@ -307,7 +191,7 @@
   background-color: #e08800;
 }
 
-.plan-btn-arrow--orange:hover {
+.plan-cta:hover .plan-btn-arrow--orange {
   background-color: #c07700;
 }
 
@@ -325,10 +209,6 @@
   font-size: 0.65rem;
 }
 
-/* ── Bold dato variant ───────────────────────── */
-.plan-dato--bold {
-  font-weight: 700;
-}
 
 /* ── Recarga banner ──────────────────────────── */
 .recarga-banner {
@@ -394,10 +274,6 @@
 
 /* ── Responsive individual plans ─────────────── */
 @media (max-width: 680px) {
-  .planes-individual-container {
-    margin: 10px;
-    padding: 32px 16px;
-  }
 
   .recarga-titulo {
     font-size: 1.2rem;
@@ -550,6 +426,7 @@
 }
 
 .pasos-titulo em {
+  font-family: var(--font-serif);
   font-style: italic;
   color: #FF9A00;
   font-weight: 700;
@@ -708,6 +585,7 @@
 }
 
 .contratar-titulo em {
+  font-family: var(--font-serif);
   font-style: italic;
   color: #FF9A00;
   font-weight: 700;
@@ -880,7 +758,7 @@
   padding: 4px;
   width: 100%;
   max-width: 440px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   margin-bottom: 16px;
 }
 
