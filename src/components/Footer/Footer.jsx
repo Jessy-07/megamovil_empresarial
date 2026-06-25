@@ -1,5 +1,10 @@
 import React from 'react';
 import './Footer.css';
+import fbIcon from "../../assets/img/general/facebook-logo-icon.png";
+import xIcon from "../../assets/img/general/x-logo-icon.png";
+import igIcon from "../../assets/img/general/instagram-logo-icon.png";
+import ytbIcon from "../../assets/img/general/youtube-logo-icon.png";
+
 
 const Footer = () => {
   return (
@@ -8,8 +13,7 @@ const Footer = () => {
         
         <div className="footer-top">
           <div className="footer-brand">
-            <img src="" alt="Mega Móvil Logo" className="footer-logo" />
-            <h2 className="footer-brand-text">Mega móvil</h2>
+            <img src="/src/assets/img/general/megamovil-logo-black.png" alt="Mega Móvil Logo" className="footer-logo" />
           </div>
           
           <nav className="footer-nav">
@@ -42,11 +46,19 @@ const Footer = () => {
           </div>
           
           <div className="footer-social">
-            {/* Social icon placeholders */}
-            <a href="#" className="social-icon facebook" title="Facebook"></a>
-            <a href="#" className="social-icon x-twitter" title="X (Twitter)"></a>
-            <a href="#" className="social-icon youtube" title="YouTube"></a>
-            <a href="#" className="social-icon instagram" title="Instagram"></a>
+            {/* Social icons */}
+            <a href="#" className="social-icon facebook" title="Facebook">
+              <img src={fbIcon} alt="Facebook" className="w-[40px] h-auto" />
+            </a>
+            <a href="#" className="social-icon x-twitter" title="X (Twitter)">
+              <img src={xIcon} alt="X (Twitter)" className="w-[40px] h-auto" />
+            </a>
+            <a href="#" className="social-icon youtube" title="YouTube">
+              <img src={ytbIcon} alt="YouTube" className="w-[40px] h-auto" />
+            </a>
+            <a href="#" className="social-icon instagram" title="Instagram">
+              <img src={igIcon} alt="Instagram" className="w-[40px] h-auto" />
+            </a>
           </div>
         </div>
         

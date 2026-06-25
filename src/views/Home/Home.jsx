@@ -12,7 +12,10 @@ import snapIcon from "../../assets/img/general/snapchat-logo-icon.png";
 import telegramIcon from "../../assets/img/general/telegram-logo-icon.png";
 import whatsappIcon from "../../assets/img/general/whatsap-logo-icon.png";
 import xIcon from "../../assets/img/general/x-logo-icon.png";
-
+import solicitarNipIcon from "../../assets/img/home/solicitar-nip-icon.png";
+import daTuNipIcon from "../../assets/img/home/da-tu-nip-icon.png";
+import tramiteEnProcesoIcon from "../../assets/img/home/tramite-en-proceso-icon.png";
+import readyIcon from "../../assets/img/home/ready-icon.png";
 const planes = [
   {
     id: 1,
@@ -86,35 +89,31 @@ const planesIndividuales = [
 export default function Home() {
   return (
     <>
-      <section className="megamovil-negocio-container m-5 rounded-[20px] flex items-center justify-center px-6 py-10 md:p-12 h-auto min-h-[480px] md:h-[550px] box-border">
+      <section className="bg-banner-negocio m-2 md:m-5 rounded-[20px] flex md:items-center justify-center px-4 py-10 md:p-12 h-auto min-h-[550px] md:min-h-[300px] xl:h-[550px] box-border">
         <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.6fr] gap-6">
-          <div className="flex flex-col gap-7 items-start text-left">
-            <h1 className="text-white text-[2.2rem] md:text-[2.5rem] font-light leading-[1.2] m-0">
-              Con Mega Móvil Negocio, <span className="cursive-txt md:text-[3.5rem]"  >tu empresa <br />siempre está conectada.</span>
+          <div className="flex flex-col gap-7 items-center md:items-start text-center md:text-left">
+            <h1 className="text-white text-[1.5rem] lg:text-[1.8rem] xl:text-[2.5rem] font-light leading-[1.2] m-0 xl:max-w-[800px]">
+              Con Mega Móvil Negocio, <span className="cursive-txt text-[2rem] lg:text-[2.5rem] xl:text-[3.5rem]">tu empresa siempre está conectada.</span>
             </h1>
-            <p className="text-white/95 text-[1.15rem] md:text-[1.7rem] leading-[1.45] m-0 max-w-[650px] font-light">
+            <p className="text-white mt-[260px] md:mt-[0px] text-[1.15rem] md:text-[1.2rem] lg:text-[1.4rem] xl:text-[1.7rem] leading-[1.45] m-0 lg:max-w-[500px] xl:max-w-[700px] font-light">
               Planes móviles para equipos que necesitan comunicarse, atender
               clientes y trabajar desde cualquier lugar.
             </p>
-            <button className="group flex items-center border-none bg-transparent p-0 cursor-pointer outline-none">
-              <span className="bg-[#1f5eff] group-hover:bg-[#0e4ce6] text-white rounded-full pl-8 pr-10 py-3.5 text-[0.9rem] font-medium transition-colors duration-200">
-                Conoce nuestros planes
-              </span>
-              <span className="bg-white text-[#1f5eff] rounded-full w-[45px] h-[45px] flex items-center justify-center text-[1.1rem] font-bold transition-transform duration-200 group-hover:translate-x-2 shadow-[0_4px_10px_rgba(0,0,0,0.1)] -ml-5">
-                ❯
-              </span>
+            <button className="btn-pill btn-pill--blue">
+              <span className="btn-pill-text">Conoce nuestros planes</span>
+              <span className="btn-pill-icon">❯</span>
             </button>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#f8f6f2] h-auto flex justify-center items-start py-12 px-6 rounded-2xl m-5">
+      <section className="bg-[#f8f6f2] h-auto flex justify-center items-start px-4 py-10 md:p-12 rounded-2xl m-2 md:m-5">
         <section className="max-w-[1300px] w-full">
-          <h3 className="text-[16px] font-normal  text-[#555] uppercase">PLANES COMPARTIDOS</h3>
-          <h2 className="text-[2.2rem] md:text-[2.5rem] font-medium text-[#111] mb-6 leading-[1.2]">
+          <h3 className="section-label">PLANES COMPARTIDOS</h3>
+          <h2 className="section-title">
             Conoce nuestros <em className="cursive-txt md:text-[3.2rem] text-[#2252ff]">planes de negocio</em>
           </h2>
-          <p className="text-lg md:text-[1.6rem]  mb-9 leading-[1.5]">
+          <p className="section-desc">
             Planes móviles con 2, 3 y 4 líneas pensados
             <br />
             para que tu equipo se comunique mejor.
@@ -162,7 +161,7 @@ export default function Home() {
                   key={red.nombre}
                   src={red.icon}
                   alt={red.nombre}
-                  className="w-[50px] md:w-[45px] h-auto object-contain transition-transform hover:-translate-y-1"
+                  className="w-[40px] md:w-[45px] h-auto object-contain transition-transform hover:-translate-y-1"
                   title={red.nombre}
                 />
               ))}
@@ -173,7 +172,7 @@ export default function Home() {
       </section>
 
 
-      <section className="megamovil-empresa-container h-auto min-h-[480px] md:h-[550px] flex justify-center py-16 px-6">
+      <section className="bg-banner-empresa h-auto min-h-[480px] md:h-[550px] flex justify-center py-16 px-6">
         <div className="max-w-[1300px] w-full grid grid-cols-1  gap-12 items-center">
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-3">
@@ -182,11 +181,11 @@ export default function Home() {
                 <span className="text-[#FF9A00] cursive-txt md:text-[3.2rem]">con la confianza que tu empresa merece</span></p>
 
             </div>
-            <button className="group flex items-center border-none bg-transparent p-0 cursor-pointer outline-none">
-              <span className="bg-[#FF9A00] group-hover:bg-[#e68a00] text-white rounded-full pl-8 pr-10 py-3.5 text-[0.9rem] font-medium transition-colors duration-200">
+            <button className="btn-pill btn-pill--orange">
+              <span className="btn-pill-text">
                 Conoce nuestros planes
               </span>
-              <span className="bg-white text-[#FF9A00] rounded-full w-[45px] h-[45px] flex items-center justify-center text-[1.1rem] font-bold transition-transform duration-200 group-hover:translate-x-2 shadow-[0_4px_10px_rgba(0,0,0,0.1)] -ml-5">
+              <span className="btn-pill-icon">
                 ❯
               </span>
             </button>
@@ -199,11 +198,11 @@ export default function Home() {
       {/* Planes individuales */}
       <section className="bg-[#fff] h-auto flex justify-center items-start py-12 px-6 rounded-2xl m-5">
         <section className="max-w-[1300px] w-full">
-          <h3 className="text-[16px] font-normal text-[#555] uppercase">PLANES INDIVIDUALES</h3>
-          <h2 className="text-[2.2rem] md:text-[2.5rem] font-medium text-[#111] mb-6 leading-[1.2]">
+          <h3 className="section-label">PLANES INDIVIDUALES</h3>
+          <h2 className="section-title">
             Conoce nuestros <em className="cursive-txt md:text-[3.2rem] text-[#FF9A00]">planes individuales</em>
           </h2>
-          <p className="text-lg md:text-[1.6rem] mb-9 leading-[1.5]">
+          <p className="section-desc">
             Tenemos un plan para cada forma de conectarte: 6 GB, 30 GB o GIGAS ILIMITADOS
             <br />
             para que sigas conectado a tu ritmo.
@@ -258,14 +257,14 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="recarga-banner">
-            <p className="recarga-subtitulo">¡Sigue conectado con más Gigas!</p>
-            <h2 className="recarga-titulo">Compra más saldo para tu Plan Mega móvil</h2>
-            <button className="group flex items-center border-none bg-transparent p-0 cursor-pointer outline-none mt-3">
-              <span className="bg-[#FF9A00] group-hover:bg-[#e68a00] text-white rounded-full pl-8 pr-10 py-3.5 text-[0.9rem] font-medium transition-colors duration-200">
+          <div className="bg-[#f4f4f4] py-10 px-8 text-center mt-8 flex flex-col items-center gap-1.5 border border-[#2252ff]">
+            <p className="text-[1.6rem] m-0">¡Sigue conectado con más Gigas!</p>
+            <h2 className="text-[2rem] text-[#111] -mt-2">Compra más saldo para tu Plan Mega móvil</h2>
+            <button className="btn-pill btn-pill--orange mt-3">
+              <span className="btn-pill-text">
                 Quiero una recarga
               </span>
-              <span className="bg-white text-[#FF9A00] rounded-full w-[45px] h-[45px] flex items-center justify-center text-[1.1rem] font-bold transition-transform duration-200 group-hover:translate-x-2 shadow-[0_4px_10px_rgba(0,0,0,0.1)] -ml-5">
+              <span className="btn-pill-icon">
                 ❯
               </span>
             </button>
@@ -274,12 +273,12 @@ export default function Home() {
       </section>
 
       {/* Sección Compatibilidad */}
-      <section className="compatibilidad-container bg-[#FAF6F3] m-5 rounded-2xl py-16 px-12 flex justify-center">
+      <section className="bg-compatibilidad m-5 rounded-2xl py-16 px-12 flex justify-center">
         <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10 items-center">
 
           <div className="flex flex-col">
-            <p className="text-[16px] font-normal text-[#555] uppercase">DESCUBRE LA FORMA PARA OBTENER EL IMEI</p>
-            <h2 className="text-[2.5rem]  text-[#111] mb-8 leading-[1.2]">¿Mi equipo es compatible?</h2>
+            <p className="section-label mb-2">DESCUBRE LA FORMA PARA OBTENER EL IMEI</p>
+            <h2 className="section-title">¿Mi equipo es compatible?</h2>
 
             <div className="bg-white border border-[#FAD082] rounded px-14 py-8 flex items-center gap-14 max-w-[500px]">
               <div className="flex items-center justify-center shrink-0">
@@ -312,7 +311,7 @@ export default function Home() {
       </section>
 
       {/* Sección de Información (Cobertura, Más megas, eSIM) */}
-      <section className="py-5 mx-5 flex justify-center">
+      <section className="mx-5 flex justify-center">
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
 
           <div className="info-card bg-[#f8f6f2]">
@@ -355,17 +354,17 @@ export default function Home() {
       </section>
 
       {/* Pasos para cambiarte */}
-      <section className="pasos-container">
-        <section className="pasos-section">
-          <p className="pasos-label">PASOS PARA CAMBIARTE A MEGA MÓVIL</p>
-          <h2 className="pasos-titulo">
-            Conserva tu <em>número</em>
+      <section className="bg-[#fff] py-12 px-12 rounded-2xl m-5 flex justify-center">
+        <section className="max-w-[1300px] w-full">
+          <p className="section-label mb-2">PASOS PARA CAMBIARTE A MEGA MÓVIL</p>
+          <h2 className="section-title">
+            Conserva tu <em className="cursive-txt md:text-[3.2rem] text-[#FF9A00]">número</em>
           </h2>
-          <p className="pasos-subtitulo">
+          <p className="section-desc">
             Cámbiate a Mega móvil, fácil y rápido, siguiendo estos sencillos pasos.
           </p>
 
-          <div className="pasos-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
             {/* Paso 1 */}
             <div className="paso-card">
@@ -375,7 +374,7 @@ export default function Home() {
               </div>
               <div className="paso-body">
                 <div className="paso-icon">
-                  <img src="" alt="Paso 1" className="paso-img" />
+                  <img src={solicitarNipIcon} alt="Paso 1" className="paso-img" />
                 </div>
                 <p className="paso-texto">
                   Solicita tu NIP <br />
@@ -393,7 +392,7 @@ export default function Home() {
               </div>
               <div className="paso-body">
                 <div className="paso-icon">
-                  <img src="" alt="Paso 2" className="paso-img" />
+                  <img src={daTuNipIcon} alt="Paso 2" className="paso-img" />
                 </div>
                 <p className="paso-texto">
                   Danos tu NIP <br />
@@ -412,7 +411,7 @@ export default function Home() {
               </div>
               <div className="paso-body">
                 <div className="paso-icon">
-                  <img src="" alt="Paso 3" className="paso-img" />
+                  <img src={tramiteEnProcesoIcon} alt="Paso 3" className="paso-img" />
                 </div>
                 <p className="paso-texto">
                   Tu trámite está en proceso <br />
@@ -429,7 +428,7 @@ export default function Home() {
               </div>
               <div className="paso-body">
                 <div className="paso-icon">
-                  <img src="" alt="Paso 4" className="paso-img" />
+                  <img src={readyIcon} alt="Paso 4" className="paso-img" />
                 </div>
                 <p className="paso-texto">
                   <strong>¡LISTO!</strong> Una vez que te <br />
@@ -443,21 +442,23 @@ export default function Home() {
         </section>
       </section>
       {/* Sección Contratar */}
-      <section className="contratar-section" style={{ backgroundImage: "url('')" }}>
-        <div className="contratar-container">
-          <div className="contratar-cta">
-            <p className="contratar-label">ESTAS LISTO PARA UNIRTE</p>
-            <h2 className="contratar-titulo">
+      <section className="bg-cta flex justify-center py-16 px-6">
+        <div className="max-w-[1300px] w-full flex justify-end items-center">
+          <div className="bg-cta-card flex flex-col justify-center rounded-[24px] p-8 md:px-20 max-w-[680px] w-full h-[400px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+            <p className="ml-8 section-label mb-2">ESTAS LISTO PARA UNIRTE</p>
+            <h2 className="ml-8 text-[2.5rem] text-[#111] m-0 mb-8 leading-[1.2]">
               Quiero contratar <br />
-              <em>Mega Móvil</em>
+              <em className="cursive-txt md:text-[3.2rem] text-[#FF9A00]">Mega Móvil</em>
             </h2>
-            <div className="contratar-form">
+            <div className="flex items-center justify-center w-full">
               <input
                 type="text"
                 placeholder="INGRESA TU IMEI AQUÍ"
-                className="contratar-input"
+                className="flex-grow bg-white rounded-full py-4 px-8 text-[16px] text-[#333] outline-none placeholder:text-[#aaa] shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-none"
               />
-              <button className="contratar-btn">Valida aquí</button>
+              <button className="bg-[#FF9A00] hover:bg-[#e68a00] text-white rounded-full py-4 px-8 text-[16px] font-semibold transition-colors duration-200 cursor-pointer border-none shadow-[0_4px_12px_rgba(0,0,0,0.05)] z-10 shrink-0">
+                Valida aquí
+              </button>
             </div>
           </div>
         </div>
