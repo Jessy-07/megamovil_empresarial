@@ -1,5 +1,5 @@
 .megamovil-negocio-container {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/home/megamovil-negocio-banner01.jpg");
+  background-image: url("/src/assets/img/home/megamovil-negocio-banner01.jpg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -9,16 +9,10 @@
   font-family: var(--font-serif);
 }
 
-@media (max-width: 768px) {
-  .megamovil-negocio-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url("../../assets/img/home/megamovil-negocio-banner01.jpg");
-  }
-}
-
 
 /* ── Plan card ───────────────────────────────── */
 .plan-card {
-  background: #fff;
+  background: #faf9f4;
   padding: 24px 20px 0;
   position: relative;
   display: flex;
@@ -82,7 +76,7 @@
 }
 
 .plan-dato--small {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
@@ -164,7 +158,21 @@
 }
 
 
+.megamovil-empresa-container {
+  background-image: url("/src/assets/img/home/megamovil-negocio-banner02.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 
+
+/* Compatibilidad */
+.compatibilidad-container {
+  background-image: url("/src/assets/img/home/megamovil-compatibilidad-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
 /* ── Orange card variant ─────────────────────── */
@@ -212,28 +220,26 @@
 
 /* ── Recarga banner ──────────────────────────── */
 .recarga-banner {
-  background-color: #F4F4F4;
-  padding: 28px 32px;
+  background-color: #f4f4f4;
+  padding: 40px 32px;
   text-align: center;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  border: 1px solid #B0C4DE;
+  border: 1px solid #2252ff;
 }
 
 .recarga-subtitulo {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 1.6rem;
   margin: 0;
 }
 
 .recarga-titulo {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
   color: #111;
-  margin: 0;
+  margin-top: -8PX;
 }
 
 .recarga-cta {
@@ -281,53 +287,27 @@
 }
 
 /* ── Info Cards Section ──────────────────────── */
-.info-cards-container {
-  padding: 20px 0;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.info-cards-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
 
 .info-card {
   border-radius: 24px;
-  padding: 32px 24px;
+  padding: 32px 64px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 56px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.info-card--cobertura {
-  background-color: #FAF9F4;
-}
-
-.info-card--megas {
-  background-color: #EFECE1;
-}
-
-.info-card--esim {
-  background-color: #FFFFFF;
 }
 
 .info-card-icon {
   flex-shrink: 0;
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .info-card-img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -338,8 +318,7 @@
 }
 
 .info-card-label {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 16px;
   color: #888;
   letter-spacing: 0.05em;
   margin-bottom: 4px;
@@ -347,14 +326,13 @@
 }
 
 .info-card-titulo {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 2.5rem;
   color: #111;
   margin: 0 0 8px 0;
 }
 
 .info-card-texto {
-  font-size: 0.85rem;
+  font-size: 16px;
   color: #555;
   margin: 0 0 16px 0;
   line-height: 1.4;
@@ -366,7 +344,7 @@
   border: none;
   border-radius: 999px;
   padding: 8px 20px;
-  font-size: 0.8rem;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   display: inline-flex;
@@ -377,12 +355,6 @@
 
 .info-card-btn:hover {
   background-color: #0040D0;
-}
-
-@media (max-width: 900px) {
-  .info-cards-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 480px) {
@@ -641,174 +613,5 @@
 
   .contratar-titulo {
     font-size: 2rem;
-  }
-}
-
-/* ── Compatibilidad Section ──────────────────────────── */
-.compatibilidad-container {
-  background-color: #FAF6F3;
-  margin: 20px;
-  border-radius: 16px;
-  padding: 64px 48px;
-  display: flex;
-  justify-content: center;
-}
-
-.compatibilidad-wrapper {
-  max-width: 1000px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.compatibilidad-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.compatibilidad-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #888;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.compatibilidad-titulo {
-  font-size: 2.2rem;
-  font-weight: 500;
-  color: #111;
-  margin: 0 0 32px 0;
-  line-height: 1.2;
-}
-
-.compatibilidad-card {
-  background-color: #ffffff;
-  border: 1px solid #FAD082;
-  border-radius: 4px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  max-width: 360px;
-}
-
-.compatibilidad-icon {
-  width: 48px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.compatibilidad-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.compatibilidad-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.compatibilidad-card-label {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #888;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-
-.compatibilidad-card-marca {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #111;
-  margin: 0 0 4px 0;
-  line-height: 1.1;
-}
-
-.compatibilidad-card-marca strong {
-  font-weight: 600;
-}
-
-.compatibilidad-action {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.compatibilidad-action-titulo {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #111;
-  margin: 0 0 24px 0;
-  line-height: 1.2;
-}
-
-.compatibilidad-form {
-  display: flex;
-  background-color: #fff;
-  border-radius: 999px;
-  padding: 4px;
-  width: 100%;
-  max-width: 440px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 16px;
-}
-
-.compatibilidad-input {
-  flex-grow: 1;
-  border: none;
-  background: transparent;
-  padding: 12px 20px;
-  font-size: 0.85rem;
-  color: #333;
-  outline: none;
-}
-
-.compatibilidad-input::placeholder {
-  color: #aaa;
-  font-weight: 500;
-}
-
-.compatibilidad-btn {
-  background-color: #FF9A00;
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  padding: 12px 28px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.compatibilidad-btn:hover {
-  background-color: #e68a00;
-}
-
-.compatibilidad-link {
-  font-size: 0.8rem;
-  color: #555;
-  margin: 0;
-}
-
-.compatibilidad-link a {
-  color: #111;
-  font-weight: 600;
-  text-decoration: underline;
-  font-style: italic;
-}
-
-@media (max-width: 768px) {
-  .compatibilidad-wrapper {
-    grid-template-columns: 1fr;
-    gap: 48px;
   }
 }

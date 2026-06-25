@@ -1,5 +1,9 @@
 import "./Home.css";
 import logoMegamovil from "../../assets/img/home/logo_megamovil.png";
+import telefonoIcon from "../../assets/img/home/compatibilidad-telefono-icon.png";
+import coberturaIcon from "../../assets/img/home/cobertura-icon.png";
+import masMegasIcon from "../../assets/img/home/mas-megas-icon.png";
+import esimIcon from "../../assets/img/home/esim-icon.png";
 import Footer from "../../components/Footer/Footer";
 import fbIcon from "../../assets/img/general/facebook-logo-icon.png";
 import igIcon from "../../assets/img/general/instagram-logo-icon.png";
@@ -169,24 +173,23 @@ export default function Home() {
       </section>
 
 
-      <section className="bg-[#272727] flex justify-center py-16 px-6">
-        <div className="max-w-[1000px] w-full grid grid-cols-1  gap-12 items-center">
+      <section className="megamovil-empresa-container h-auto min-h-[480px] md:h-[550px] flex justify-center py-16 px-6">
+        <div className="max-w-[1300px] w-full grid grid-cols-1  gap-12 items-center">
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-3">
-              <img src={logoMegamovil} alt="Mega Móvil Negocio" className="w-[200px]" />
-              <p className="text-white mt-[32px] text-[32px] font-medium">La movilidad que tu equipo necesita, <br />
-                <span className="text-[#FF9A00]">con la confianza que tu empresa merece</span></p>
+              <img src={logoMegamovil} alt="Mega Móvil Negocio" className="w-[250px]" />
+              <p className="text-white mt-[40px] md:text-[2.5rem] leading-[1.3]">La movilidad que tu equipo necesita, <br />
+                <span className="text-[#FF9A00] cursive-txt md:text-[3.2rem]">con la confianza que tu empresa merece</span></p>
 
             </div>
-            <div className="flex items-center ">
-              <a
-                href=""
-                className="bg-[#FF9A00] rounded-full text-white text-sm font-medium px-6 py-3 hover:bg-[#0d0dbd] transition-colors"
-              >
+            <button className="group flex items-center border-none bg-transparent p-0 cursor-pointer outline-none">
+              <span className="bg-[#FF9A00] group-hover:bg-[#e68a00] text-white rounded-full pl-8 pr-10 py-3.5 text-[0.9rem] font-medium transition-colors duration-200">
                 Conoce nuestros planes
-              </a>
-              <span className="bg-[#ffffff] flex items-center justify-center  rounded-full text-black text-sm w-[40px] h-[40px]">→</span>
-            </div>
+              </span>
+              <span className="bg-white text-[#FF9A00] rounded-full w-[45px] h-[45px] flex items-center justify-center text-[1.1rem] font-bold transition-transform duration-200 group-hover:translate-x-2 shadow-[0_4px_10px_rgba(0,0,0,0.1)] -ml-5">
+                ❯
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -194,13 +197,13 @@ export default function Home() {
 
 
       {/* Planes individuales */}
-      <section className="bg-[#e8e8e8] h-auto flex justify-center items-start py-12 px-6 rounded-2xl m-5">
-        <section className="max-w-[1000px] w-full">
-          <p className="text-[11px] font-semibold tracking-[0.08em] text-[#555] uppercase mb-2">PLANES COMPARTIDOS</p>
-          <h1 className="text-2xl md:text-[2rem] font-medium text-[#111] mb-3 leading-[1.2]">
-            Conoce nuestros <em className="font-serif italic text-[#FF9A00] font-bold">planes individuales</em>
-          </h1>
-          <p className="text-lg md:text-[1.4rem] text-[#333] mb-9 leading-[1.5]">
+      <section className="bg-[#fff] h-auto flex justify-center items-start py-12 px-6 rounded-2xl m-5">
+        <section className="max-w-[1300px] w-full">
+          <h3 className="text-[16px] font-normal text-[#555] uppercase">PLANES INDIVIDUALES</h3>
+          <h2 className="text-[2.2rem] md:text-[2.5rem] font-medium text-[#111] mb-6 leading-[1.2]">
+            Conoce nuestros <em className="cursive-txt md:text-[3.2rem] text-[#FF9A00]">planes individuales</em>
+          </h2>
+          <p className="text-lg md:text-[1.6rem] mb-9 leading-[1.5]">
             Tenemos un plan para cada forma de conectarte: 6 GB, 30 GB o GIGAS ILIMITADOS
             <br />
             para que sigas conectado a tu ritmo.
@@ -245,7 +248,7 @@ export default function Home() {
                 </div>
                 <p className="plan-por-solo">Por solo</p>
                 <p className="plan-precio">
-                  {plan.precio} <span className="plan-mes">al mes</span>
+                  {plan.precio} <span className="plan-mes">/ al mes</span>
                 </p>
                 <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
                   <span className="plan-btn plan-btn--orange">Contratar aquí</span>
@@ -258,89 +261,93 @@ export default function Home() {
           <div className="recarga-banner">
             <p className="recarga-subtitulo">¡Sigue conectado con más Gigas!</p>
             <h2 className="recarga-titulo">Compra más saldo para tu Plan Mega móvil</h2>
-            <div className="recarga-cta">
-              <button className="recarga-btn">quiero una recarga</button>
-              <span className="recarga-arrow" >❯</span>
-            </div>
+            <button className="group flex items-center border-none bg-transparent p-0 cursor-pointer outline-none mt-3">
+              <span className="bg-[#FF9A00] group-hover:bg-[#e68a00] text-white rounded-full pl-8 pr-10 py-3.5 text-[0.9rem] font-medium transition-colors duration-200">
+                Quiero una recarga
+              </span>
+              <span className="bg-white text-[#FF9A00] rounded-full w-[45px] h-[45px] flex items-center justify-center text-[1.1rem] font-bold transition-transform duration-200 group-hover:translate-x-2 shadow-[0_4px_10px_rgba(0,0,0,0.1)] -ml-5">
+                ❯
+              </span>
+            </button>
           </div>
         </section>
       </section>
 
       {/* Sección Compatibilidad */}
-      <section className="compatibilidad-container">
-        <div className="compatibilidad-wrapper">
+      <section className="compatibilidad-container bg-[#FAF6F3] m-5 rounded-2xl py-16 px-12 flex justify-center">
+        <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10 items-center">
 
-          <div className="compatibilidad-info">
-            <p className="compatibilidad-label">DESCUBRE LA FORMA PARA OBTENER EL IMEI</p>
-            <h2 className="compatibilidad-titulo">¿Mi equipo es compatible?</h2>
+          <div className="flex flex-col">
+            <p className="text-[16px] font-normal text-[#555] uppercase">DESCUBRE LA FORMA PARA OBTENER EL IMEI</p>
+            <h2 className="text-[2.5rem]  text-[#111] mb-8 leading-[1.2]">¿Mi equipo es compatible?</h2>
 
-            <div className="compatibilidad-card">
-              <div className="compatibilidad-icon">
-                <img src="" alt="Celular" className="compatibilidad-img" />
+            <div className="bg-white border border-[#FAD082] rounded px-14 py-8 flex items-center gap-14 max-w-[500px]">
+              <div className="flex items-center justify-center shrink-0">
+                <img src={telefonoIcon} alt="Celular" className="w-[80px] md:w-[70px] h-auto object-contain" />
               </div>
-              <div className="compatibilidad-details">
-                <span className="compatibilidad-card-label">OBTEN TU IMEI</span>
-                <p className="compatibilidad-card-marca">Solo Marca<br /><strong>*#06#</strong></p>
-                <span className="compatibilidad-card-label">DESDE TU CELULAR</span>
+              <div className="flex flex-col">
+                <span className="text-[16px] text-[#888] mb-1 uppercase">OBTEN TU IMEI</span>
+                <p className="text-[2.5rem] font-normal text-[#111] mb-1 leading-[1.1]">Solo Marca<br />*#06#</p>
+                <span className="text-[16px] text-[#888] mb-1 uppercase">DESDE TU CELULAR</span>
               </div>
             </div>
           </div>
 
-          <div className="compatibilidad-action">
-            <h2 className="compatibilidad-action-titulo">¡YA LO TIENES!<br />INGRESALO AQUÍ</h2>
-            <div className="compatibilidad-form">
+          <div className="flex flex-col items-center text-center mt-10 md:mt-0">
+            <h2 className="text-[2.5rem] text-[#111] mb-6 leading-[1.2]">¡YA LO TIENES!<br />INGRESALO AQUÍ</h2>
+            <div className="flex items-center justify-center w-full max-w-[500px] mb-4">
               <input
                 type="text"
                 placeholder="INGRESA TU IMEI AQUÍ"
-                className="compatibilidad-input"
+                className="flex-grow bg-white rounded-full py-4 px-8 text-[16px] text-[#333] outline-none placeholder:text-[#aaa] shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-none"
               />
-              <button className="compatibilidad-btn">Valida aquí</button>
+              <button className="bg-[#FF9A00] hover:bg-[#e68a00] text-white rounded-full py-4 px-6 text-[16px] font-semibold transition-colors duration-200 cursor-pointer border-none shadow-[0_4px_12px_rgba(0,0,0,0.05)] z-10 shrink-0">Valida aquí</button>
             </div>
-            <p className="compatibilidad-link">
-              Conoce nuestros planes compatibles con todos los equipos, <a href="#">click aquí</a>
+            <p className="text-[16px] text-[#555] m-0">
+              Conoce nuestros planes compatibles con todos los equipos, <a href="#" className=" font-semibold underline italic">click aquí</a>
             </p>
           </div>
 
         </div>
       </section>
 
-      {/* Nueva Sección de Información (Cobertura, Más megas, eSIM) */}
-      <section className="info-cards-container">
-        <div className="info-cards-grid">
+      {/* Sección de Información (Cobertura, Más megas, eSIM) */}
+      <section className="py-5 mx-5 flex justify-center">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
 
-          <div className="info-card info-card--cobertura">
+          <div className="info-card bg-[#f8f6f2]">
             <div className="info-card-icon">
-              <img src="" alt="Cobertura" className="info-card-img" />
+              <img src={coberturaIcon} alt="Cobertura" className="info-card-img" />
             </div>
             <div className="info-card-content">
               <span className="info-card-label">MAYOR Y MEJOR</span>
               <h3 className="info-card-titulo">Cobertura</h3>
               <p className="info-card-texto">Navega y llama en todo México, EE.UU y Cánada</p>
-              <button className="info-card-btn">Valida aquí &gt;</button>
+              <button className="info-card-btn">Valida aquí &nbsp;&nbsp;&nbsp;&gt;</button>
             </div>
           </div>
 
-          <div className="info-card info-card--megas">
+          <div className="info-card bg-[#ece5d5]">
             <div className="info-card-icon">
-              <img src="" alt="Más megas" className="info-card-img" />
+              <img src={masMegasIcon} alt="Más megas" className="info-card-img" />
             </div>
             <div className="info-card-content">
               <span className="info-card-label">OBTEN</span>
               <h3 className="info-card-titulo">Más megas</h3>
               <p className="info-card-texto">Suma Megas a tu internet de casa al contratar Mega móvil.</p>
-              <button className="info-card-btn">Valida aquí &gt;</button>
+              <button className="info-card-btn">Valida aquí &nbsp;&nbsp;&nbsp;&gt;</button>
             </div>
           </div>
 
-          <div className="info-card info-card--esim">
+          <div className="info-card bg-white">
             <div className="info-card-icon">
-              <img src="" alt="eSIM" className="info-card-img" />
+              <img src={esimIcon} alt="eSIM" className="info-card-img" />
             </div>
             <div className="info-card-content">
               <span className="info-card-label">TECNOLOGÍA</span>
               <h3 className="info-card-titulo">eSIM</h3>
               <p className="info-card-texto">Instala fácil y sin esperar con nuestras eSIM.</p>
-              <button className="info-card-btn">Valida aquí &gt;</button>
+              <button className="info-card-btn">Valida aquí &nbsp;&nbsp;&nbsp;&gt;</button>
             </div>
           </div>
 
