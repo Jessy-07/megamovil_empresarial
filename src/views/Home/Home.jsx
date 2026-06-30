@@ -92,7 +92,7 @@ export default function Home() {
       <section className="bg-banner-negocio m-2 md:m-5 rounded-[20px] flex md:items-center justify-center px-4 py-10 md:p-12 h-auto min-h-[550px] md:min-h-[300px] xl:h-[550px] box-border">
         <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.6fr] gap-6">
           <div className="flex flex-col gap-7 items-center md:items-start text-center md:text-left">
-            <h1 className="text-white text-[1.5rem] lg:text-[1.8rem] xl:text-[2.5rem] font-light leading-[1.2] m-0 xl:max-w-[800px]">
+            <h1 className="text-white text-[1.6rem] lg:text-[1.8rem] xl:text-[2.5rem] font-light leading-[1.2] m-0 xl:max-w-[800px]">
               Con Mega Móvil Negocio, <span className="cursive-txt text-[2rem] lg:text-[2.5rem] xl:text-[3.5rem]">tu empresa siempre está conectada.</span>
             </h1>
             <p className="text-white mt-[260px] md:mt-[0px] text-[1.15rem] md:text-[1.2rem] lg:text-[1.4rem] xl:text-[1.7rem] leading-[1.45] m-0 lg:max-w-[500px] xl:max-w-[700px] font-light">
@@ -111,7 +111,7 @@ export default function Home() {
         <section className="max-w-[1300px] w-full">
           <h3 className="section-label">PLANES COMPARTIDOS</h3>
           <h2 className="section-title">
-            Conoce nuestros <em className="cursive-txt md:text-[3.2rem] text-[#2252ff]">planes de negocio</em>
+            Conoce nuestros <em className="cursive-txt text-[#2252ff]">planes de negocio</em>
           </h2>
           <p className="section-desc">
             Planes móviles con 2, 3 y 4 líneas pensados
@@ -119,7 +119,7 @@ export default function Home() {
             para que tu equipo se comunique mejor.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-16 items-start mb-10 mt-12">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12">
             {planes.map((plan) => (
               <div
                 key={plan.id}
@@ -172,23 +172,26 @@ export default function Home() {
       </section>
 
 
-      <section className="bg-banner-empresa h-auto min-h-[480px] md:h-[550px] flex justify-center py-16 px-6">
-        <div className="max-w-[1300px] w-full grid grid-cols-1  gap-12 items-center">
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-3">
-              <img src={logoMegamovil} alt="Mega Móvil Negocio" className="w-[250px]" />
-              <p className="text-white mt-[40px] md:text-[2.5rem] leading-[1.3]">La movilidad que tu equipo necesita, <br />
-                <span className="text-[#FF9A00] cursive-txt md:text-[3.2rem]">con la confianza que tu empresa merece</span></p>
+      <section className="bg-banner-empresa h-auto min-h-[600px] md:min-h-[550px] flex justify-center py-12 md:py-16 px-6 :m-0 md:rounded-none">
+        <div className="max-w-[1300px] w-full flex flex-col justify-start md:justify-center">
+          <div className="flex flex-col items-center md:items-start w-full">
+            <img src={logoMegamovil} alt="Mega Móvil Negocio" className="w-[200px] md:w-[250px] md:mt-0" />
 
+            <div className="flex flex-col items-center md:items-start text-center md:text-left gap-8 md:gap-12 mt-[260px] md:mt-[40px]">
+              <p className="text-white text-[1.5rem] md:text-[2.5rem] leading-[1.3] m-0">
+                La movilidad que tu equipo necesita, <br />
+                <span className="text-[#FF9A00] cursive-txt-02 text-[2rem] md:text-[3.2rem]">con la confianza que tu empresa merece</span>
+              </p>
+
+              <button className="btn-pill btn-pill--orange">
+                <span className="btn-pill-text">
+                  Conoce nuestros planes
+                </span>
+                <span className="btn-pill-icon">
+                  ❯
+                </span>
+              </button>
             </div>
-            <button className="btn-pill btn-pill--orange">
-              <span className="btn-pill-text">
-                Conoce nuestros planes
-              </span>
-              <span className="btn-pill-icon">
-                ❯
-              </span>
-            </button>
           </div>
         </div>
       </section>
@@ -196,7 +199,7 @@ export default function Home() {
 
 
       {/* Planes individuales */}
-      <section className="bg-[#fff] h-auto flex justify-center items-start py-12 px-6 rounded-2xl m-5">
+      <section className="bg-[#fff] h-auto flex justify-center items-start px-4 py-10 md:p-12 rounded-2xl m-2 md:m-5">
         <section className="max-w-[1300px] w-full">
           <h3 className="section-label">PLANES INDIVIDUALES</h3>
           <h2 className="section-title">
@@ -208,7 +211,7 @@ export default function Home() {
             para que sigas conectado a tu ritmo.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-16 items-start mb-10 mt-12">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 md:gap-y-20  items-start mb-10 mt-12">
             {planesIndividuales.map((plan) => (
               <div
                 key={plan.id}
@@ -273,36 +276,36 @@ export default function Home() {
       </section>
 
       {/* Sección Compatibilidad */}
-      <section className="bg-compatibilidad m-5 rounded-2xl py-16 px-12 flex justify-center">
-        <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10 items-center">
+      <section className="bg-compatibilidad m-2 md:m-5 rounded-2xl px-4 py-10 md:p-12 flex justify-center">
+        <div className="max-w-[1300px] w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <p className="section-label mb-2">DESCUBRE LA FORMA PARA OBTENER EL IMEI</p>
             <h2 className="section-title">¿Mi equipo es compatible?</h2>
 
-            <div className="bg-white border border-[#FAD082] rounded px-14 py-8 flex items-center gap-14 max-w-[500px]">
+            <div className="bg-white border border-[#FAD082] rounded px-6 lg:px-14 py-6 lg:py-8 flex flex-col sm:flex-row items-center gap-6 lg:gap-14 max-w-[500px]">
               <div className="flex items-center justify-center shrink-0">
-                <img src={telefonoIcon} alt="Celular" className="w-[80px] md:w-[70px] h-auto object-contain" />
+                <img src={telefonoIcon} alt="Celular" className="w-[50px] lg:w-[70px] h-auto object-contain" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-[16px] text-[#888] mb-1 uppercase">OBTEN TU IMEI</span>
-                <p className="text-[2.5rem] font-normal text-[#111] mb-1 leading-[1.1]">Solo Marca<br />*#06#</p>
-                <span className="text-[16px] text-[#888] mb-1 uppercase">DESDE TU CELULAR</span>
+              <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                <span className="text-[14px] lg:text-[16px] text-[#888] mb-1 uppercase">OBTEN TU IMEI</span>
+                <p className="text-[2rem] lg:text-[2.5rem] font-normal text-[#111] mb-1 leading-[1.1]">Solo Marca<br />*#06#</p>
+                <span className="text-[14px] lg:text-[16px] text-[#888] mb-1 uppercase">DESDE TU CELULAR</span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col items-center text-center mt-10 md:mt-0">
-            <h2 className="text-[2.5rem] text-[#111] mb-6 leading-[1.2]">¡YA LO TIENES!<br />INGRESALO AQUÍ</h2>
-            <div className="flex items-center justify-center w-full max-w-[500px] mb-4">
+          <div className="flex flex-col items-center text-center mt-10 lg:mt-0">
+            <h2 className="text-[2rem] lg:text-[2.5rem] text-[#111] mb-6 leading-[1.2]">¡YA LO TIENES!<br />INGRESALO AQUÍ</h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-[500px] mb-4 gap-3 sm:gap-0">
               <input
                 type="text"
                 placeholder="INGRESA TU IMEI AQUÍ"
-                className="flex-grow bg-white rounded-full py-4 px-8 text-[16px] text-[#333] outline-none placeholder:text-[#aaa] shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-none"
+                className="w-full sm:w-auto flex-grow bg-white rounded-full py-3 sm:py-4 px-6 sm:px-8 text-[14px] sm:text-[16px] text-[#333] outline-none placeholder:text-[#aaa] shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-none text-center sm:text-left"
               />
-              <button className="bg-[#FF9A00] hover:bg-[#e68a00] text-white rounded-full py-4 px-6 text-[16px] font-semibold transition-colors duration-200 cursor-pointer border-none shadow-[0_4px_12px_rgba(0,0,0,0.05)] z-10 shrink-0">Valida aquí</button>
+              <button className="w-full sm:w-auto bg-[#FF9A00] hover:bg-[#e68a00] text-white rounded-full py-3 sm:py-4 px-6 text-[16px] font-semibold transition-colors duration-200 cursor-pointer border-none shadow-[0_4px_12px_rgba(0,0,0,0.05)] z-10 shrink-0">Valida aquí</button>
             </div>
-            <p className="text-[16px] text-[#555] m-0">
+            <p className="text-[14px] lg:text-[16px] text-[#555] m-0">
               Conoce nuestros planes compatibles con todos los equipos, <a href="#" className=" font-semibold underline italic">click aquí</a>
             </p>
           </div>
@@ -311,10 +314,10 @@ export default function Home() {
       </section>
 
       {/* Sección de Información (Cobertura, Más megas, eSIM) */}
-      <section className="mx-5 flex justify-center">
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+      <section className="m-2 md:m-5 flex justify-center">
+        <div className="w-full flex flex-wrap justify-center gap-2 md:gap-5">
 
-          <div className="info-card bg-[#f8f6f2]">
+          <div className="info-card bg-[#f8f6f2] flex-1 min-w-[300px] md:min-w-[380px]">
             <div className="info-card-icon">
               <img src={coberturaIcon} alt="Cobertura" className="info-card-img" />
             </div>
@@ -326,7 +329,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="info-card bg-[#ece5d5]">
+          <div className="info-card bg-[#ece5d5] flex-1 min-w-[300px] md:min-w-[380px]">
             <div className="info-card-icon">
               <img src={masMegasIcon} alt="Más megas" className="info-card-img" />
             </div>
@@ -338,7 +341,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="info-card bg-white">
+          <div className="info-card bg-white flex-1 min-w-[300px] md:min-w-[380px]">
             <div className="info-card-icon">
               <img src={esimIcon} alt="eSIM" className="info-card-img" />
             </div>
@@ -354,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Pasos para cambiarte */}
-      <section className="bg-[#fff] py-12 px-12 rounded-2xl m-5 flex justify-center">
+      <section className="bg-[#fff] px-4 py-10 md:p-12 rounded-2xl m-2 md:m-5 flex justify-center">
         <section className="max-w-[1300px] w-full">
           <p className="section-label mb-2">PASOS PARA CAMBIARTE A MEGA MÓVIL</p>
           <h2 className="section-title">
@@ -442,21 +445,21 @@ export default function Home() {
         </section>
       </section>
       {/* Sección Contratar */}
-      <section className="bg-cta flex justify-center py-16 px-6">
+      <section className="bg-cta flex justify-center py-16 px-4 md:px-6">
         <div className="max-w-[1300px] w-full flex justify-end items-center">
-          <div className="bg-cta-card flex flex-col justify-center rounded-[24px] p-8 md:px-20 max-w-[680px] w-full h-[400px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
-            <p className="ml-8 section-label mb-2">ESTAS LISTO PARA UNIRTE</p>
-            <h2 className="ml-8 text-[2.5rem] text-[#111] m-0 mb-8 leading-[1.2]">
+          <div className="bg-cta-card flex flex-col justify-center items-center md:items-start text-center md:text-left rounded-[24px] p-6 md:p-8 md:px-20 max-w-[680px] w-full md:h-[400px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] py-12 md:py-0">
+            <p className="md:ml-8 section-label mb-2">ESTAS LISTO PARA UNIRTE</p>
+            <h2 className="md:ml-8 text-[2rem] md:text-[2.5rem] text-[#111] m-0 mb-8 leading-[1.2]">
               Quiero contratar <br />
-              <em className="cursive-txt md:text-[3.2rem] text-[#FF9A00]">Mega Móvil</em>
+              <em className="cursive-txt text-[2.5rem] md:text-[3.2rem] text-[#FF9A00]">Mega Móvil</em>
             </h2>
-            <div className="flex items-center justify-center w-full">
+            <div className="flex flex-col sm:flex-row items-center justify-center w-full gap-3 sm:gap-0">
               <input
                 type="text"
                 placeholder="INGRESA TU IMEI AQUÍ"
-                className="flex-grow bg-white rounded-full py-4 px-8 text-[16px] text-[#333] outline-none placeholder:text-[#aaa] shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-none"
+                className="w-full sm:w-auto flex-grow bg-white rounded-full py-3 sm:py-4 px-6 sm:px-8 text-[14px] sm:text-[16px] text-[#333] outline-none placeholder:text-[#aaa] shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-none text-center sm:text-left"
               />
-              <button className="bg-[#FF9A00] hover:bg-[#e68a00] text-white rounded-full py-4 px-8 text-[16px] font-semibold transition-colors duration-200 cursor-pointer border-none shadow-[0_4px_12px_rgba(0,0,0,0.05)] z-10 shrink-0">
+              <button className="w-full sm:w-auto bg-[#FF9A00] hover:bg-[#e68a00] text-white rounded-full py-3 sm:py-4 px-8 text-[16px] font-semibold transition-colors duration-200 cursor-pointer border-none shadow-[0_4px_12px_rgba(0,0,0,0.05)] z-10 shrink-0">
                 Valida aquí
               </button>
             </div>

@@ -2,7 +2,13 @@
 .footer-container {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 767px) {
+  .footer-container {
+    padding: 20px;
+  }
 }
 
 .footer-content {
@@ -103,7 +109,7 @@
 }
 
 .footer-copyright {
-  font-size:16px;
+  font-size: 16px;
   color: #333;
 }
 
@@ -166,5 +172,6 @@
 
   .footer-content {
     padding: 32px 24px;
+    height: auto;
   }
 }
