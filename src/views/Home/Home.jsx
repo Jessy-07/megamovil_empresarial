@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./Home.css";
 import logoMegamovil from "../../assets/img/home/logo_megamovil.png";
 import telefonoIcon from "../../assets/img/home/compatibilidad-telefono-icon.png";
@@ -87,6 +88,16 @@ const planesIndividuales = [
 ];
 
 export default function Home() {
+  const planesCompartidosRef = useRef(null);
+  const planesIndividualesRef = useRef(null);
+
+  const scroll = (ref, direction) => {
+    if (ref.current) {
+      const scrollAmount = ref.current.clientWidth;
+      ref.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <section className="bg-banner-negocio m-2 md:m-5 rounded-[20px] flex md:items-center justify-center px-4 py-10 md:p-12 h-auto min-h-[550px] md:min-h-[300px] xl:h-[550px] box-border">
@@ -119,11 +130,27 @@ export default function Home() {
             para que tu equipo se comunique mejor.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12">
+          <div className="relative">
+            <button 
+              onClick={() => scroll(planesCompartidosRef, 'left')}
+              className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#2252ff] font-bold text-xl transition-colors hover:bg-white/80"
+            >
+              &#10094;
+            </button>
+            <button 
+              onClick={() => scroll(planesCompartidosRef, 'right')}
+              className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#2252ff] font-bold text-xl transition-colors hover:bg-white/80"
+            >
+              &#10095;
+            </button>
+            <div 
+              ref={planesCompartidosRef}
+              className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
+            >
             {planes.map((plan) => (
               <div
                 key={plan.id}
-                className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] ${plan.destacado ? "plan-card--destacado mt-[40px] sm:mt-0" : ""}`}
+                className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] shrink-0 snap-center ${plan.destacado ? "plan-card--destacado mt-[40px] sm:mt-0" : ""}`}
               >
                 {plan.destacado && (
                   <span className="plan-badge">¡PARA TODOS!</span>
@@ -150,6 +177,7 @@ export default function Home() {
                 </button>
               </div>
             ))}
+            </div>
           </div>
 
           <div className="text-center mt-2">
@@ -178,9 +206,9 @@ export default function Home() {
             <img src={logoMegamovil} alt="Mega Móvil Negocio" className="w-[200px] md:w-[250px] md:mt-0" />
 
             <div className="flex flex-col items-center md:items-start text-center md:text-left gap-8 md:gap-12 mt-[260px] md:mt-[40px]">
-              <p className="text-white text-[1.5rem] md:text-[2.5rem] leading-[1.3] m-0">
+              <p className="text-white text-[1.5rem] md:text-[2rem] xl:text-[2.5rem]  leading-[1.3] m-0">
                 La movilidad que tu equipo necesita, <br />
-                <span className="text-[#FF9A00] cursive-txt-02 text-[2rem] md:text-[3.2rem]">con la confianza que tu empresa merece</span>
+                <span className="text-[#FF9A00] cursive-txt-02 text-[2rem] md:text-[2.5rem] xl:text-[3.2rem]">con la confianza que tu empresa merece</span>
               </p>
 
               <button className="btn-pill btn-pill--orange">
@@ -211,11 +239,27 @@ export default function Home() {
             para que sigas conectado a tu ritmo.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 md:gap-y-20  items-start mb-10 mt-12">
+          <div className="relative">
+            <button 
+              onClick={() => scroll(planesIndividualesRef, 'left')}
+              className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#FF9A00] font-bold text-xl transition-colors hover:bg-white/80"
+            >
+              &#10094;
+            </button>
+            <button 
+              onClick={() => scroll(planesIndividualesRef, 'right')}
+              className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#FF9A00] font-bold text-xl transition-colors hover:bg-white/80"
+            >
+              &#10095;
+            </button>
+            <div 
+              ref={planesIndividualesRef}
+              className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
+            >
             {planesIndividuales.map((plan) => (
               <div
                 key={plan.id}
-                className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] ${plan.destacado ? "plan-card--destacado-orange mt-[40px] sm:mt-0" : ""}`}
+                className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] shrink-0 snap-center ${plan.destacado ? "plan-card--destacado-orange mt-[40px] sm:mt-0" : ""}`}
               >
                 {plan.destacado && (
                   <span className="plan-badge plan-badge--orange">¡PARA TODOS!</span>
@@ -258,6 +302,7 @@ export default function Home() {
                 </button>
               </div>
             ))}
+            </div>
           </div>
 
           <div className="bg-[#f4f4f4] py-10 px-8 text-center mt-8 flex flex-col items-center gap-1.5 border border-[#2252ff]">
@@ -367,10 +412,10 @@ export default function Home() {
             Cámbiate a Mega móvil, fácil y rápido, siguiendo estos sencillos pasos.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
 
             {/* Paso 1 */}
-            <div className="paso-card">
+            <div className="paso-card w-full sm:w-[calc(50%-10px)] xl:w-[calc(25%-15px)]">
               <div className="paso-header">
                 <span className="paso-numero">1</span>
                 <span className="paso-titulo-header">Solicita tu NIP</span>
@@ -388,7 +433,7 @@ export default function Home() {
             </div>
 
             {/* Paso 2 */}
-            <div className="paso-card">
+            <div className="paso-card w-full sm:w-[calc(50%-10px)] xl:w-[calc(25%-15px)]">
               <div className="paso-header">
                 <span className="paso-numero">2</span>
                 <span className="paso-titulo-header">Danos tu NIP</span>
@@ -407,7 +452,7 @@ export default function Home() {
             </div>
 
             {/* Paso 3 */}
-            <div className="paso-card">
+            <div className="paso-card w-full sm:w-[calc(50%-10px)] xl:w-[calc(25%-15px)]">
               <div className="paso-header">
                 <span className="paso-numero">3</span>
                 <span className="paso-titulo-header">Trámite en proceso</span>
@@ -424,7 +469,7 @@ export default function Home() {
             </div>
 
             {/* Paso 4 */}
-            <div className="paso-card">
+            <div className="paso-card w-full sm:w-[calc(50%-10px)] xl:w-[calc(25%-15px)]">
               <div className="paso-header">
                 <span className="paso-numero">4</span>
                 <span className="paso-titulo-header">¡Listo!</span>
