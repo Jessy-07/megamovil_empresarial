@@ -147,7 +147,7 @@ export default function Home() {
             </button>
             <div
               ref={planesCompartidosRef}
-              className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
+              className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-stretch mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
             >
               {planes.map((plan) => (
                 <div
@@ -256,7 +256,7 @@ export default function Home() {
             </button>
             <div
               ref={planesIndividualesRef}
-              className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
+              className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-stretch mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
             >
               {planesIndividuales.map((plan) => (
                 <div

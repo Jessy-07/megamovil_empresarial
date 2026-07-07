@@ -1,0 +1,12 @@
+.bg-banner-internacional {
+  background-image: url("../../assets/img/plan-internacional/planes-internacionales-bgs-mobile.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .bg-banner-internacional {
+    background-image: url("../../assets/img/plan-internacional/planes-internacionales-bgs.jpg");
+  }
+}
