@@ -5,6 +5,7 @@ import telefonoIcon from "../../assets/img/home/compatibilidad-telefono-icon.png
 import coberturaIcon from "../../assets/img/home/cobertura-icon.png";
 import masMegasIcon from "../../assets/img/home/mas-megas-icon.png";
 import esimIcon from "../../assets/img/home/esim-icon.png";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import fbIcon from "../../assets/img/general/facebook-logo-icon.png";
 import igIcon from "../../assets/img/general/instagram-logo-icon.png";
@@ -100,6 +101,7 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <section className="bg-banner-negocio m-2 md:m-5 rounded-[20px] flex md:items-center justify-center px-4 py-10 md:p-12 h-auto min-h-[550px] md:min-h-[300px] xl:h-[550px] box-border">
         <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.6fr] gap-6">
           <div className="flex flex-col gap-7 items-center md:items-start text-center md:text-left">
@@ -131,52 +133,52 @@ export default function Home() {
           </p>
 
           <div className="relative">
-            <button 
+            <button
               onClick={() => scroll(planesCompartidosRef, 'left')}
               className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#2252ff] font-bold text-xl transition-colors hover:bg-white/80"
             >
               &#10094;
             </button>
-            <button 
+            <button
               onClick={() => scroll(planesCompartidosRef, 'right')}
               className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#2252ff] font-bold text-xl transition-colors hover:bg-white/80"
             >
               &#10095;
             </button>
-            <div 
+            <div
               ref={planesCompartidosRef}
               className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
             >
-            {planes.map((plan) => (
-              <div
-                key={plan.id}
-                className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] shrink-0 snap-center ${plan.destacado ? "plan-card--destacado mt-[40px] sm:mt-0" : ""}`}
-              >
-                {plan.destacado && (
-                  <span className="plan-badge">¡PARA TODOS!</span>
-                )}
-                <p className="plan-categoria">PLAN NEGOCIO</p>
-                <h2 className="plan-lineas">{plan.lineas}</h2>
-                <hr className="plan-divider" />
-                <div className="plan-datos">
-                  {plan.datos.map((dato, idx) => (
-                    <div key={idx}>
-                      {idx > 0 && <span className="plan-mas">+</span>}
-                      <p className="plan-dato">{dato.cantidad}</p>
-                      {dato.extra && <p className="plan-extra">{dato.extra}</p>}
-                    </div>
-                  ))}
+              {planes.map((plan) => (
+                <div
+                  key={plan.id}
+                  className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] shrink-0 snap-center ${plan.destacado ? "plan-card--destacado mt-[40px] sm:mt-0" : ""}`}
+                >
+                  {plan.destacado && (
+                    <span className="plan-badge">¡PARA TODOS!</span>
+                  )}
+                  <p className="plan-categoria">PLAN NEGOCIO</p>
+                  <h2 className="plan-lineas">{plan.lineas}</h2>
+                  <hr className="plan-divider" />
+                  <div className="plan-datos">
+                    {plan.datos.map((dato, idx) => (
+                      <div key={idx}>
+                        {idx > 0 && <span className="plan-mas">+</span>}
+                        <p className="plan-dato">{dato.cantidad}</p>
+                        {dato.extra && <p className="plan-extra">{dato.extra}</p>}
+                      </div>
+                    ))}
+                  </div>
+                  <p className="plan-por-solo">Por solo</p>
+                  <p className="plan-precio">
+                    {plan.precio} <span className="plan-mes">/ al mes</span>
+                  </p>
+                  <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
+                    <span className="plan-btn">Contratar aquí</span>
+                    <span className="plan-btn-arrow">→</span>
+                  </button>
                 </div>
-                <p className="plan-por-solo">Por solo</p>
-                <p className="plan-precio">
-                  {plan.precio} <span className="plan-mes">/ al mes</span>
-                </p>
-                <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
-                  <span className="plan-btn">Contratar aquí</span>
-                  <span className="plan-btn-arrow">→</span>
-                </button>
-              </div>
-            ))}
+              ))}
             </div>
           </div>
 
@@ -240,68 +242,68 @@ export default function Home() {
           </p>
 
           <div className="relative">
-            <button 
+            <button
               onClick={() => scroll(planesIndividualesRef, 'left')}
               className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#FF9A00] font-bold text-xl transition-colors hover:bg-white/80"
             >
               &#10094;
             </button>
-            <button 
+            <button
               onClick={() => scroll(planesIndividualesRef, 'right')}
               className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white/50 shadow-[0_2px_10px_rgba(0,0,0,0.1)] rounded-full w-10 h-10 flex items-center justify-center lg:hidden text-[#FF9A00] font-bold text-xl transition-colors hover:bg-white/80"
             >
               &#10095;
             </button>
-            <div 
+            <div
               ref={planesIndividualesRef}
               className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none gap-x-6 lg:gap-x-8 gap-y-12 md:gap-y-20 items-start mb-10 mt-12 pb-8 lg:pb-0 hide-scrollbar px-0"
             >
-            {planesIndividuales.map((plan) => (
-              <div
-                key={plan.id}
-                className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] shrink-0 snap-center ${plan.destacado ? "plan-card--destacado-orange mt-[40px] sm:mt-0" : ""}`}
-              >
-                {plan.destacado && (
-                  <span className="plan-badge plan-badge--orange">¡PARA TODOS!</span>
-                )}
-                <p className="plan-categoria">PLAN INDIVIDUAL</p>
-                <h2 className="plan-lineas">{plan.nombre}</h2>
-                <hr className="plan-divider" />
-                <div className="plan-datos">
-                  <div>
-                    <p className="plan-dato">{plan.datos}</p>
-                    <p className="plan-extra">{plan.datosLabel}</p>
-                  </div>
-                  <div>
-                    <span className="plan-mas">+</span>
-                    <p className="plan-dato plan-dato--small">Redes Sociales<br />Ilimitadas*</p>
-                    <div className="plan-redes-mini">
-                      {redesSociales.map((red) => (
-                        <img
-                          key={red.nombre}
-                          src={red.icon}
-                          alt={red.nombre}
-                          className="w-[30px] h-auto object-contain"
-                          title={red.nombre}
-                        />
-                      ))}
+              {planesIndividuales.map((plan) => (
+                <div
+                  key={plan.id}
+                  className={`plan-card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[420px] shrink-0 snap-center ${plan.destacado ? "plan-card--destacado-orange mt-[40px] sm:mt-0" : ""}`}
+                >
+                  {plan.destacado && (
+                    <span className="plan-badge plan-badge--orange">¡PARA TODOS!</span>
+                  )}
+                  <p className="plan-categoria">PLAN INDIVIDUAL</p>
+                  <h2 className="plan-lineas">{plan.nombre}</h2>
+                  <hr className="plan-divider" />
+                  <div className="plan-datos">
+                    <div>
+                      <p className="plan-dato">{plan.datos}</p>
+                      <p className="plan-extra">{plan.datosLabel}</p>
+                    </div>
+                    <div>
+                      <span className="plan-mas">+</span>
+                      <p className="plan-dato plan-dato--small">Redes Sociales<br />Ilimitadas*</p>
+                      <div className="plan-redes-mini">
+                        {redesSociales.map((red) => (
+                          <img
+                            key={red.nombre}
+                            src={red.icon}
+                            alt={red.nombre}
+                            className="w-[30px] h-auto object-contain"
+                            title={red.nombre}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <span className="plan-mas">+</span>
+                      <p className="plan-dato plan-dato--small">Minnutos y<br />SMS incluidas</p>
                     </div>
                   </div>
-                  <div>
-                    <span className="plan-mas">+</span>
-                    <p className="plan-dato plan-dato--small">Minnutos y<br />SMS incluidas</p>
-                  </div>
+                  <p className="plan-por-solo">Por solo</p>
+                  <p className="plan-precio">
+                    {plan.precio} <span className="plan-mes">/ al mes</span>
+                  </p>
+                  <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
+                    <span className="plan-btn plan-btn--orange">Contratar aquí</span>
+                    <span className="plan-btn-arrow plan-btn-arrow--orange">→</span>
+                  </button>
                 </div>
-                <p className="plan-por-solo">Por solo</p>
-                <p className="plan-precio">
-                  {plan.precio} <span className="plan-mes">/ al mes</span>
-                </p>
-                <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
-                  <span className="plan-btn plan-btn--orange">Contratar aquí</span>
-                  <span className="plan-btn-arrow plan-btn-arrow--orange">→</span>
-                </button>
-              </div>
-            ))}
+              ))}
             </div>
           </div>
 
