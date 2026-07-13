@@ -52,8 +52,18 @@ const Header = () => {
               <div className={`relative xl:absolute xl:left-0 xl:top-full w-full xl:w-auto pt-2 z-50 ${isSubmenuOpen ? 'block' : 'hidden'} xl:!hidden xl:group-hover:!block`}>
                 <ul className="bg-gray-50 xl:bg-white xl:shadow-lg rounded-md py-2 w-full xl:w-48 border border-gray-100">
                   <li>
+                    <Link to="/planes" className="block px-4 py-2 text-[14px] text-[#32368c] hover:bg-gray-100 xl:hover:bg-gray-50 hover:text-[#FF9A00] transition-colors text-center xl:text-left">
+                      Planes
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/planes-internacionales" className="block px-4 py-2 text-[14px] text-[#32368c] hover:bg-gray-100 xl:hover:bg-gray-50 hover:text-[#FF9A00] transition-colors text-center xl:text-left">
                       Planes Internacionales
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/compatibilidad" className="block px-4 py-2 text-[14px] text-[#32368c] hover:bg-gray-100 xl:hover:bg-gray-50 hover:text-[#FF9A00] transition-colors text-center xl:text-left">
+                      Compatibilidad
                     </Link>
                   </li>
                 </ul>
