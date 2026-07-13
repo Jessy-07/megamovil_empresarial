@@ -105,7 +105,7 @@ export default function Home() {
       <section className="bg-banner-negocio m-2 md:m-5 rounded-[20px] flex md:items-center justify-center px-4 py-10 md:p-12 h-auto min-h-[550px] md:min-h-[300px] xl:h-[550px] box-border">
         <div className="max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.6fr] gap-6">
           <div className="flex flex-col gap-7 items-center md:items-start text-center md:text-left">
-            <h1 className="text-white text-[1.6rem] lg:text-[1.8rem] xl:text-[2.5rem] font-light leading-[1.2] m-0 xl:max-w-[800px]">
+            <h1 className="text-white text-[1.6rem] lg:text-[2rem] xl:text-[2.4rem] font-light leading-[1.2] m-0 xl:max-w-[800px]">
               Con Mega Móvil Negocio, <span className="cursive-txt text-[2rem] lg:text-[2.5rem] xl:text-[3.5rem]">tu empresa siempre está conectada.</span>
             </h1>
             <p className="text-white mt-[260px] md:mt-[0px] text-[1.15rem] md:text-[1.2rem] lg:text-[1.4rem] xl:text-[1.7rem] leading-[1.45] m-0 lg:max-w-[500px] xl:max-w-[700px] font-light">
@@ -273,14 +273,14 @@ export default function Home() {
                     <div>
                       <p className="plan-dato">{plan.datos}</p>
                       <p className="plan-extra">{plan.datosLabel}</p>
-                    </div> 
+                    </div>
                   </div>
-               
+
                   <p className="plan-por-solo">Por solo</p>
                   <p className="plan-precio">
                     {plan.precio} <span className="plan-mes">/ al mes</span>
                   </p>
-                   <p className="plan-extra">*Adicionales a tu mensualidad</p>
+                  <p className="plan-extra">*Adicionales a tu mensualidad</p>
                   <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
                     <span className="plan-btn plan-btn--orange">Contratar aquí</span>
                     <span className="plan-btn-arrow plan-btn-arrow--orange">→</span>
@@ -289,21 +289,21 @@ export default function Home() {
               ))}
 
               <div className="text-center mt-2">
-            <p className="text-xl md:text-[1.6rem] text-[#333] mb-1">Todos los planes cuentan con</p>
-            <p className="text-2xl md:text-[2rem] font-semibold text-[#111] mb-4">Redes sociales ilimitadas*</p>
-            <div className="flex justify-center gap-1 mb-3 flex-wrap">
-              {redesSociales.map((red) => (
-                <img
-                  key={red.nombre}
-                  src={red.icon}
-                  alt={red.nombre}
-                  className="w-[40px] md:w-[45px] h-auto object-contain transition-transform hover:-translate-y-1"
-                  title={red.nombre}
-                />
-              ))}
-            </div>
-            <p className="text-xl md:text-[1.8rem] text-[#111] m-0">+ minutos y sms</p>
-          </div>
+                <p className="text-xl md:text-[1.6rem] text-[#333] mb-1">Todos los planes cuentan con</p>
+                <p className="text-2xl md:text-[2rem] font-semibold text-[#111] mb-4">Redes sociales ilimitadas*</p>
+                <div className="flex justify-center gap-1 mb-3 flex-wrap">
+                  {redesSociales.map((red) => (
+                    <img
+                      key={red.nombre}
+                      src={red.icon}
+                      alt={red.nombre}
+                      className="w-[40px] md:w-[45px] h-auto object-contain transition-transform hover:-translate-y-1"
+                      title={red.nombre}
+                    />
+                  ))}
+                </div>
+                <p className="text-xl md:text-[1.8rem] text-[#111] m-0">+ minutos y sms</p>
+              </div>
             </div>
           </div>
 
@@ -336,7 +336,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
                 <span className="text-[14px] lg:text-[16px] text-[#888] mb-1 uppercase">OBTEN TU IMEI</span>
-                <p className="text-[2rem] lg:text-[2.5rem] font-normal text-[#111] mb-1 leading-[1.1]">Solo Marca<br />*#06#</p>
+                <p className="text-[2rem] lg:text-[2rem] font-normal text-[#111] mb-1 leading-[1.1]">Solo Marca<br />*#06#</p>
                 <span className="text-[14px] lg:text-[16px] text-[#888] mb-1 uppercase">DESDE TU CELULAR</span>
               </div>
             </div>

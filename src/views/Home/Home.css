@@ -129,14 +129,14 @@
 
 @media screen and (min-width: 1024px) {
 
-  .section-title,
+
   .plan-lineas,
   .plan-precio {
     font-size: 2.5rem;
   }
 
   .cursive-txt {
-    font-size: 3.4rem;
+    font-size: 3rem;
   }
 
   .plan-precio {
@@ -144,7 +144,11 @@
   }
 }
 
-@media screen and (min-width: 1280px) {}
+@media screen and (min-width: 1380px) {
+  .cursive-txt {
+    font-size: 3.4rem;
+  }
+}
 
 
 
@@ -440,12 +444,6 @@
   margin: 0 0 8px 0;
 }
 
-@media (min-width: 767px) {
-  .info-card-titulo {
-    font-size: 2.5rem;
-  }
-}
-
 
 .info-card-texto {
   font-size: 16px;
@@ -592,6 +590,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
