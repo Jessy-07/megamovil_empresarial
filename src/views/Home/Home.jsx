@@ -273,37 +273,37 @@ export default function Home() {
                     <div>
                       <p className="plan-dato">{plan.datos}</p>
                       <p className="plan-extra">{plan.datosLabel}</p>
-                    </div>
-                    <div>
-                      <span className="plan-mas">+</span>
-                      <p className="plan-dato plan-dato--small">Redes Sociales<br />Ilimitadas*</p>
-                      <div className="plan-redes-mini">
-                        {redesSociales.map((red) => (
-                          <img
-                            key={red.nombre}
-                            src={red.icon}
-                            alt={red.nombre}
-                            className="w-[30px] h-auto object-contain"
-                            title={red.nombre}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <span className="plan-mas">+</span>
-                      <p className="plan-dato plan-dato--small">Minnutos y<br />SMS incluidas</p>
-                    </div>
+                    </div> 
                   </div>
+               
                   <p className="plan-por-solo">Por solo</p>
                   <p className="plan-precio">
                     {plan.precio} <span className="plan-mes">/ al mes</span>
                   </p>
+                   <p className="plan-extra">*Adicionales a tu mensualidad</p>
                   <button className="plan-cta bg-transparent border-none p-0 outline-none block w-[calc(100%+40px)]">
                     <span className="plan-btn plan-btn--orange">Contratar aquí</span>
                     <span className="plan-btn-arrow plan-btn-arrow--orange">→</span>
                   </button>
                 </div>
               ))}
+
+              <div className="text-center mt-2">
+            <p className="text-xl md:text-[1.6rem] text-[#333] mb-1">Todos los planes cuentan con</p>
+            <p className="text-2xl md:text-[2rem] font-semibold text-[#111] mb-4">Redes sociales ilimitadas*</p>
+            <div className="flex justify-center gap-1 mb-3 flex-wrap">
+              {redesSociales.map((red) => (
+                <img
+                  key={red.nombre}
+                  src={red.icon}
+                  alt={red.nombre}
+                  className="w-[40px] md:w-[45px] h-auto object-contain transition-transform hover:-translate-y-1"
+                  title={red.nombre}
+                />
+              ))}
+            </div>
+            <p className="text-xl md:text-[1.8rem] text-[#111] m-0">+ minutos y sms</p>
+          </div>
             </div>
           </div>
 
